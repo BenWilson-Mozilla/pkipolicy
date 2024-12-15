@@ -686,15 +686,6 @@ Section 4.9.12 of a CA operator's CPS (or, if applicable, the CP or CP/CPS) MUST
 
 ### 6.1 TLS ###
 
-For any certificate in a hierarchy capable of being used for 
-TLS-enabled servers, CAs MUST revoke certificates that they have 
-issued upon the occurrence of any event listed in the appropriate 
-subsection of section 4.9.1 of the [TLS Baseline Requirements][TLS-BRs], 
-according to the timeline defined therein. CAs MUST also revoke 
-any certificates issued in violation of the then-current version 
-of this policy according to the timeline defined in 
-section 4.9.1 of the TLS Baseline Requirements.
-
 #### 6.1.1 End Entity TLS Certificate CRLRevocation Reasons ####
 
 When an end entity TLS certificate (i.e. a certificate capable of being used for TLS-enabled servers) is revoked for one of the reasons below, the specified CRLReason MUST be included in the reasonCode extension of the CRL entry corresponding to the end entity TLS certificate, as described in sections 4.9.1 and 7.2.2 of the [TLS Baseline Requirements][TLS-BRs].
@@ -715,6 +706,25 @@ A CRL whose scope does not include all unexpired certificates that are issued by
 
 1.    The UniformResourceIdentifier as encoded in the distributionPoint field of an issued certificate's CRL Distribution Points extension (see RFC 5280 section 5.2.5); or
 2.    The URL as included in the "JSON Array of Partitioned CRLs" field in the CCADB entry corresponding to the certificate for the issuing CA.
+
+#### 6.1.3 Delayed Revocation
+
+Mozilla’s goal is to ensure that revocation occurs as swiftly as possible while maintaining the overall security and stability of the web. For any certificate in a hierarchy capable of being used for TLS-enabled servers, CAs MUST revoke certificates that they have issued upon the occurrence of any event listed in the appropriate subsection of section 4.9.1 of the [TLS Baseline Requirements][TLS-BRs] (including for any violation of the then-current version of this policy), according to the timeline defined therein. Mozilla does not grant exceptions to the revocation requirements of the TLS BRs.
+
+In order to promote compliance, CA operators MUST: 
+
+* advise subscribers well in advance about the revocation timelines and explicitly warn them against using publicly-trusted TLS server certificates on systems that cannot tolerate timely revocation;
+* include appropriate language in customer agreements requiring subscribers’ timely cooperation in meeting revocation timelines and acknowledging the CA’s obligations to adhere to applicable revocation policies and standards; and
+* prepare, maintain, and annually test credible plans to address mass revocation events.
+
+The preparation, maintenance, and testing of a mass revocation plan MUST include:
+* detailed procedures for handling mass revocations effectively, including rapid communication with subscribers;
+* annual plan testing by revoking 30 randomly chosen certificates within a 5-day timeframe; and
+* incorporation of feedback from plan-testing exercises into the mass revocation plan in order to improve future readiness.
+  
+Beginning on an annual basis after April 15, 2026, the CA operator's audit report submitted under section 3.1 SHALL include an attestation that the CA operator has met these mass revocation planning requirements.  
+
+Section 2.4 of this policy incorporates by reference the [CCADB's Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report). It has reporting requirements that MUST be followed by CA operators who determine they might delay revocation of certificates beyond the time period required by the TLS BRs. For instance, the Analysis field in the Impact section of such incident reports MUST explain "the factors and rationales behind the decision to delay revocation (including detailed and substantiated explanations of how extensive harm would result to third parties–such as essential public services or widely relied-upon systems–and why the situation is exceptionally rare and unavoidable)." All delayed revocation incidents MUST be listed as findings in the CA operator’s next TLS BR audit statement. Repeated incidents of delayed revocation without sufficient justification will result in heightened scrutiny and sanctions, which may include removal of the CA from the Mozilla Root Store.
 
 ### 6.2 S/MIME ###
 
