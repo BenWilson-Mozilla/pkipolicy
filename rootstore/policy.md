@@ -184,6 +184,8 @@ audits for their root certificates and all intermediate certificates
 that are technically capable of issuing working server or email certificates. 
 This section describes the requirements for those audits.
 
+Also, CA operators MUST comply with [Section 5 of the CCADB Policy](https://www.ccadb.org/policy#5-audit-disclosures) for all audit submission and audit-related data requirements.
+
 #### 3.1.1 Audit Criteria
 
 We consider the criteria for CA operations published in the
@@ -191,26 +193,24 @@ following documents to be acceptable:
 
 **WebTrust Program for Certification Authorities** ([WebTrust][WebTrust-For-CAs])
 *   WebTrust "[Principles and Criteria for Certification Authorities - Version
-    2.2.2][WebTrust-2.2.2]", or later;
-*   WebTrust "[Principles and Criteria for Certification Authorities – Network Security - Version 1.7][WebTrust-NetSec]", or later;  
-*   WebTrust "[Principles and Criteria for Certification Authorities – SSL
-    Baseline - Version 2.8][WebTrust-BRs]", or later;
-*   WebTrust "[Principles and Criteria for Certification Authorities -
-    Extended Validation SSL - Version 1.8][WebTrust-EV]", or later;
-*   WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates - Version 1.0.3][WebTrust-SMIME], or later;
+    2.2.2][WebTrust-2.2.2]", or later version;
+*   WebTrust "Principles and Criteria for Certification Authorities – Network Security," Version 1.7 permitted for audit periods ending before 2026-11-29, [Network Security - Version 2.0.5][WebTrust-NetSec]" required thereafter;  
+*   WebTrust "Principles and Criteria for Certification Authorities – SSL Baseline," Version 2.9 permitted for audit periods ending before 2026-11-29, [TLS Baseline - Version 2.10][WebTrust-BRs] required thereafter;
+*   WebTrust "[Principles and Criteria for Certification Authorities - Extended Validation SSL - Version 2.0.1][WebTrust-EV]", or later version;
+*   WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates - Version 1.0.8][WebTrust-SMIME], or later version;
 
 **European Telecommunications Standards Institute** (ETSI)
-*   "Trust Service Providers practice" in ETSI EN 319 411-1 v1.4.1 or
+*   "Trust Service Providers practice" in ETSI EN 319 411-1 v1.5.1, or
     later version [Policy and security requirements for Trust Service Providers
     issuing certificates; Part 1: General requirements][ETSI-319-411-1],
     specifying a policy or policies appropriate to the trust bit(s) being
     applied for; 
-*   "Trust Service Providers practice" in ETSI EN 319 411-2 v2.5.1 or
+*   "Trust Service Providers practice" in ETSI EN 319 411-2 v2.6.1, or
     later version [Policy and security requirements for Trust Service Providers
     issuing certificates; Part 2: Requirements for trust service providers
     issuing EU qualified certificates][ETSI-319-411-2], specifying a
     policy or policies appropriate to the trust bit(s) being applied for; *and*
-*   ETSI "[Requirements for Trust Service Providers issuing publicly trusted S/MIME certificates][ETSI-119-411-6]", ETSI TS 119 411-6 v1.1.1 or later version.
+*   ETSI "[Requirements for Trust Service Providers issuing publicly trusted S/MIME certificates][ETSI-119-411-6]", ETSI TS 119 411-6 v1.1.1, or later version.
 
 #### 3.1.2 Required Audits
 
@@ -232,7 +232,7 @@ apply (see section 3.1.1 for specific version numbers):
 
     * [WebTrust for CAs][WebTrust-2.2.2]; 
     and,  
-    * for audit periods ending after October 30, 2023, a period-of-time audit performed in accordance with [WebTrust for CAs - S/MIME][WebTrust-SMIME].
+    * a period-of-time audit performed in accordance with [WebTrust for CAs - S/MIME][WebTrust-SMIME].
 
 
 ##### 3.1.2.2 ETSI
@@ -259,7 +259,7 @@ If being audited to the ETSI criteria, the following audit requirements apply
     * [ETSI EN 319 411-2][ETSI-319-411-2] (QCP-l, QCP-l-qscd, QCP-n, or
       QCP-n-qscd); 
       and,  
-    * for audit periods ending after October 30, 2023, a period-of-time audit performed in accordance with [ETSI TS 119 411-6][ETSI-119-411-6].
+    * a period-of-time audit performed in accordance with [ETSI TS 119 411-6][ETSI-119-411-6].
 
 #### 3.1.3 Audit Parameters
 Full-surveillance period-of-time audits MUST be conducted and updated audit
@@ -270,9 +270,7 @@ that an auditor previously identified in a qualified audit statement have been
 corrected. However, a point-in-time audit does not replace the
 period-of-time audit.
 
-Audit reports that are being supplied to maintain a certificate within the
-Mozilla root store MUST be provided to Mozilla via the CCADB within three
-months of the point-in-time date or the end date of the period of time.
+See also [CCADB Policy, § 5.2](https://www.ccadb.org/policy#52-audit-statement-content).
 
 #### 3.1.4 Public Audit Information
 
@@ -282,18 +280,9 @@ If Mozilla determines that an audit provided does not meet the requirements of t
 
 ### 3.2 Auditors
 
-In normal circumstances, Mozilla requires that audits MUST be performed
-by a Qualified Auditor, as defined in section 8.2 of the S/MIME BRs or TLS BRs.
+Audits MUST be performed by a Qualified Auditor. A Qualified Auditor MUST have relevant IT Security experience, or have audited a number of CAs, and be independent. ETSI Audit Attestation Letters MUST follow the Audit Attestation Letter template on the [ACAB'c website](https://www.acab-c.com/downloads), and ETSI auditors MUST be members of the [Accredited Conformity Assessment Bodies' Council][ACAB'c] and follow the ACAB'c Charter and Code of Conduct. WebTrust audit statements MUST follow the practitioner guidance, principles, and illustrative assurance reports on the [CPA Canada website](https://www.cpacanada.ca/en/business-and-accounting-resources/audit-and-assurance/overview-of-webtrust-services/principles-and-criteria), and WebTrust auditors MUST be listed as [enrolled WebTrust practitioners][WebTrust Practitioners] on the CPA Canada website. Mozilla MAY, in its sole discretion, decide to temporarily waive membership or enrollment requirements.
 
-A Qualified Auditor MUST have relevant IT Security experience, or have audited a number of CAs, and be independent. ETSI Audit Attestation Letters MUST follow the Audit Attestation Letter template on the [ACAB'c website](https://www.acab-c.com/downloads), and ETSI auditors MUST be members of the [Accredited Conformity Assessment Bodies' Council][ACAB'c] and follow the ACAB'c Charter and Code of Conduct. WebTrust audit statements MUST follow the practitioner guidance, principles, and illustrative assurance reports on the [CPA Canada website](https://www.cpacanada.ca/en/business-and-accounting-resources/audit-and-assurance/overview-of-webtrust-services/principles-and-criteria), and WebTrust auditors MUST be listed as [enrolled WebTrust practitioners][WebTrust Practitioners] on the CPA Canada website. Mozilla MAY, at its sole discretion, decide to temporarily waive membership or enrollment requirements.
-
-Each Audit Report MUST be accompanied by documentation provided to Mozilla of the [audit team qualifications][Auditor-Qualifications] sufficient for Mozilla to determine the competence, experience, and independence of the auditor. 
-
-If a CA operator wishes to use auditors who do not fit the definition of Qualified Auditor, then it MUST
-receive written permission from Mozilla to do so in advance of the start
-of the audit engagement. Mozilla will make its own determination as to
-the suitability of the suggested party or parties, at its sole discretion.
-
+Each Audit Report MUST be accompanied by a statement of audit team qualifications compliant with [CCADB Policy, § 5.3.1](https://www.ccadb.org/policy#53-audit-firm-and-audit-team-qualifications).
 
 ### 3.3 CPs and CPSes
 
@@ -1029,15 +1018,15 @@ Any copyright in this document is [dedicated to the Public Domain][CC-0].
 [TLS-BRs]:                  https://cabforum.org/working-groups/server/baseline-requirements/documents/
 [SMIME-BRs]:                https://cabforum.org/working-groups/smime/documents/
 [NSRs]:                     https://cabforum.org/working-groups/netsec/documents/
-[ETSI-319-411-1]:           https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.04.01_60/en_31941101v010401p.pdf
-[ETSI-319-411-2]:           https://www.etsi.org/deliver/etsi_en/319400_319499/31941102/02.05.01_60/en_31941102v020501p.pdf
+[ETSI-319-411-1]:           https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.05.01_60/en_31941101v010501p.pdf
+[ETSI-319-411-2]:           https://www.etsi.org/deliver/etsi_en/319400_319499/31941102/02.06.01_60/en_31941102v020601p.pdf
 [ETSI-119-411-6]:           https://www.etsi.org/deliver/etsi_ts/119400_119499/11941106/01.01.01_60/ts_11941106v010101p.pdf
 [WebTrust-2.2.2]:           https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/mds21216webtrustca-222final-(15).pdf
-[WebTrust-NetSec]:          https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_24-3464_webtrust-for-ca-network-security-v1-7_final.pdf
-[WebTrust-BRs]:             https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_24-3464_webtrust-for-ca-ssl-baseline-v2-8_final.pdf
-[WebTrust-SMIME]:           https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_24-3464_webtrust-for-ca-smime-certificates-v1-0-3_final.pdf
+[WebTrust-NetSec]:          https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_web-trust-network-security_version-2-0-5.pdf?rev=0ec68ce03b414276abfdc9aa85474093&hash=D02630C1D7B904701FE518EF863EE0E9
+[WebTrust-BRs]:             https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_webtrust_tls-baseline-v210.pdf?rev=9569e6d25b894b6a8ef89b2a58fc4115&hash=C71DB49770F1735E9C55DE3036E92B18
+[WebTrust-SMIME]:           https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/01618-ms-24-3854_webtrust---smime-v1-0-8.pdf?rev=dcf8805708bd452e8eacabd5b3a6da36&hash=74691CF3D86A8798E82FDCD1F7A9AC90
 [WebTrust-For-CAs]:         https://www.cpacanada.ca/en/business-and-accounting-resources/audit-and-assurance/overview-of-webtrust-services/principles-and-criteria
-[WebTrust-EV]:              https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618_ms_extended-validation-ssl_final_aoda-compliant.pdf
+[WebTrust-EV]:              https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/01618-ms-24-3854_webtrust---extended-validation-tls-v2-0-1.pdf?rev=4299171bd40b44058236d9cffffdd751&hash=235168A20251244ADE0490CEFA39A898
 [CC-BY]:                    https://creativecommons.org/licenses/by/4.0/
 [CC-BY-SA]:                 https://creativecommons.org/licenses/by-sa/4.0/
 [CC-BY-ND]:                 https://creativecommons.org/licenses/by-nd/4.0/
