@@ -192,14 +192,14 @@ We consider the criteria for CA operations published in the
 following documents to be acceptable:
 
 **WebTrust Program for Certification Authorities** ([WebTrust][WebTrust-For-CAs])
-*   WebTrust "[Principles and Criteria for Certification Authorities - Version
-    2.2.2][WebTrust-2.2.2]", or later version;
-*   WebTrust "Principles and Criteria for Certification Authorities – Network Security," Version 1.7 permitted for audit periods ending before 2026-11-29, [Network Security - Version 2.0.5][WebTrust-NetSec]" required thereafter;  
-*   WebTrust "Principles and Criteria for Certification Authorities – SSL Baseline," Version 2.9 permitted for audit periods ending before 2026-11-29, [TLS Baseline - Version 2.10][WebTrust-BRs] required thereafter;
-*   WebTrust "[Principles and Criteria for Certification Authorities - Extended Validation SSL - Version 2.0.1][WebTrust-EV]", or later version;
-*   WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates - Version 1.0.8][WebTrust-SMIME], or later version;
+*   WebTrust "[Principles and Criteria for Certification Authorities" - Version
+    2.2.2][WebTrust-2.2.2], or later version;
+*   WebTrust "Principles and Criteria for Certification Authorities – Network Security," Version 1.7 permitted for audit periods ending before **2026-11-29**, [WebTrust Network Security - Version 2.0.5][WebTrust-NetSec]" required thereafter;  
+*   WebTrust "Principles and Criteria for Certification Authorities – SSL Baseline," Version 2.9 permitted for audit periods ending before **2026-11-29**, [WebTrust TLS Baseline - Version 2.10][WebTrust-BRs] required thereafter;
+*   WebTrust "[Principles and Criteria for Certification Authorities - Extended Validation SSL" - Version 2.0.1][WebTrust-EV], or later version;
+*   WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates" - Version 1.0.8][WebTrust-SMIME], or later version;
 
-**European Telecommunications Standards Institute** (ETSI)
+**European Telecommunications Standards Institute - Electronic Signatures and Trust Infrastructures** ([ETSI ESI](https://www.etsi.org/committee/esi))
 *   "Trust Service Providers practice" in ETSI EN 319 411-1 v1.5.1, or
     later version [Policy and security requirements for Trust Service Providers
     issuing certificates; Part 1: General requirements][ETSI-319-411-1],
