@@ -278,6 +278,24 @@ The publicly-available documentation relating to each audit MUST contain the inf
 
 If Mozilla determines that an audit provided does not meet the requirements of this policy, then Mozilla MAY require that the CA operator obtain a new audit, at the CA operator's expense, for the period of time in question. Additionally, depending on the nature of concerns with the audit, Mozilla MAY require that the CA operator obtain such an audit from a new auditor.
 
+#### 3.1.5 Detailed Controls Reports
+
+Beginning January 1, 20xx, each CA operator MUST obtain, on an annual basis, a Detailed Controls Report (DCR) covering its CA systems. This requirement is in addition to, and does not replace, any other audit reports required by this Policy.
+
+For CA operators audited under the WebTrust program, the DCR SHALL correspond to the auditor’s detailed controls report issued in connection with the applicable WebTrust criteria.
+
+For CA operators audited under ETSI standards, the CA operator MUST obtain an equivalent report that provides, at a minimum:
+
+* A description of the CA system, including system boundaries, components, and interactions with subscribers, relying parties, and third parties;
+* Identification of applicable control objectives or criteria, and a mapping of controls to those objectives;;
+* A description of the controls implemented to meet those objectives;
+* The auditor’s tests of controls and the results of those tests;
+* An evaluation of the suitability of control design and operating effectiveness over a defined audit period;
+* Consideration of the risks that may prevent the CA from meeting applicable criteria and how the controls address those risks; and
+* A clear statement of the scope of testing, including any limitations or exclusions.
+
+The DCR is intended for use by CA management and other parties with sufficient knowledge to understand the CA’s systems and controls and is not required to be publicly disclosed. However, a CA Operator MUST provide the DCR to Mozilla upon request when necessary to clarify audit scope, assess control design or operating effectiveness, or evaluate other matters relevant to compliance with this Policy.
+
 ### 3.2 Auditors
 
 Audits MUST be performed by a Qualified Auditor. A Qualified Auditor MUST have relevant IT Security experience, or have audited a number of CAs, and be independent. ETSI Audit Attestation Letters MUST follow the Audit Attestation Letter template on the [ACAB'c website](https://www.acab-c.com/downloads), and ETSI auditors MUST be members of the [Accredited Conformity Assessment Bodies' Council][ACAB'c] and follow the ACAB'c Charter and Code of Conduct. WebTrust audit statements MUST follow the practitioner guidance, principles, and illustrative assurance reports on the [CPA Canada website](https://www.cpacanada.ca/en/business-and-accounting-resources/audit-and-assurance/overview-of-webtrust-services/principles-and-criteria), and WebTrust auditors MUST be listed as [enrolled WebTrust practitioners][WebTrust Practitioners] on the CPA Canada website. Mozilla MAY, in its sole discretion, decide to temporarily waive membership or enrollment requirements.
