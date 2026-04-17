@@ -353,9 +353,7 @@ CCADB Policy, as indicated below in this section 4.
 
 ### 4.1 Additional Requirements
 
-* CA operators with intermediate CA certificates that are capable of issuing TLS certificates chaining up to root certificates in Mozilla's root store SHALL populate the "Pertaining to Certificates Issued by This CA" section of the CCADB records corresponding to those intermediate CA certificates with either the CRL Distribution Point for the "Full CRL Issued By This CA" or a "JSON Array of Partitioned CRLs" within 7 days of such intermediate CA issuing its first certificate;
-* Each CRL referenced by the JSON Array of Partitioned CRLs MUST contain a critical Issuing Distribution Point extension as described in section 6.1.2; *and*
-* if the revocation of an intermediate certificate chaining up to a root in
+* If the revocation of an intermediate certificate chaining up to a root in
 Mozilla’s root store is due to a security concern, as well as performing the
 actions defined in the CCADB Policy, a [Vulnerability Disclosure][Vulnerability-Disclosure] MUST be filed as [a secure bug in Bugzilla][Sec-Bugs].
 
