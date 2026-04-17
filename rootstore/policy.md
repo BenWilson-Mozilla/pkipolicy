@@ -765,9 +765,11 @@ Before being included, CA operators MUST provide evidence that their CA key pair
 
 Additionally, CA operators applying for inclusion of new root certificates with the websites trust bit enabled MUST demonstrate support for at least one automated method of certificate issuance for each type of TLS certificate (EV, OV, DV, IV) intended to be issued under the root certificate being requested for inclusion. This means (1) automated domain control validation, as defined in the TLS BRs; and (2) automated certificate issuance and retrieval processes. Such automated methods MUST minimize hands-on human input during routine certificate issuance and renewal processes and comply with the TLS BRs, and EV Guidelines, if applicable. Acceptable "hands-on" input includes initial software setup, configuration, updates, and identity verification where required. CA operators MUST renew test certificates using such capability at least every 30 days to demonstrate compliance with these automation requirements. The test certificates MUST be served by publicly accessible websites, and the URL for each test site MUST be disclosed in the CCADB.
 
-To request that its certificate(s) be added to Mozilla's root store, a CA operator
-SHOULD submit a formal request by submitting a [bug report][CA-Cert-Bug]
-into [Bugzilla][Bugzilla], filed against the "CA
+Effective July 1, 2026, Mozilla will only accept root inclusion requests for root CA certificates whose corresponding root CA key pair was generated no more than five (5) years prior to the date of submission. Root CA certificates whose key material exceeds this age at the time of submission are not eligible for inclusion.
+
+To request that its certificate(s) be added to Mozilla's root store, a CA operator MUST submit a request in the CCADB and SHOULD file 
+a [bug report][CA-Cert-Bug]
+in [Bugzilla][Bugzilla], in the "CA
 Certificate Root Program" component of the "CA Program" product. Mozilla’s wiki
 page, "[Applying for root inclusion in Mozilla products][How-To-Apply]", provides
 further details about how to submit a formal request. The request
