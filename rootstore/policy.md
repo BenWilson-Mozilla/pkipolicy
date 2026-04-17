@@ -847,13 +847,7 @@ issued to someone who should not have received them, those containing
 information which was not properly validated, those having incorrect technical
 constraints, and those using algorithms other than those permitted.
 
-A failure to provide notifications or updates in the CCADB or
-as otherwise required in a timely manner SHALL also be grounds for
-disabling a CA operator’s root certificates or removing them from Mozilla's root
-store. For this policy and the CCADB policies, "a timely manner" means
-within 30 days of when the appropriate data or documentation becomes
-available to the CA operator, unless a Mozilla policy document specifies a different
-rule.
+Repeated failure to provide required notifications or updates in the CCADB, or to otherwise comply with Mozilla or CCADB Policy requirements for maintaining accurate and current information, SHALL be grounds for disabling a CA operator’s root certificates or removing them from Mozilla’s root store.
 
 If Mozilla disables or removes a CA operator’s certificate(s) from Mozilla’s
 root store based on a CA operator’s actions (or failure to act) that are
