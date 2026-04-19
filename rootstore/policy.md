@@ -306,7 +306,7 @@ Therefore:
     complies with this policy, including a description of the steps
     taken by the CA to verify certificate requests;
 
-2.  the publicly disclosed documentation MUST be available from the CA operator’s official website;
+2.  CA operators MUST maintain such documentation in a structured, text-based format suitable for version control (e.g., Markdown or AsciiDoc) and host it in a publicly accessible repository or equivalent system that preserves version history;
 
 3.  the documentation MUST be made available to Mozilla under one
     of the following Creative Commons licenses (or later versions):
