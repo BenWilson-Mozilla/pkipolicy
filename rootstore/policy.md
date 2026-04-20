@@ -317,7 +317,7 @@ CA operators with CA certificates capable of issuing working TLS server certific
 
 ## 4. Common CA Database
 
-The CCADB serves as the authoritative repository for certain operational data about publicly trusted CAs. Mozilla uses the CCADB to support management of its root store. CA operators with
+The CCADB serves as a centralized repository for key operational and compliance data about publicly trusted CAs. Mozilla uses the CCADB as part of its root store management process. CA operators with
 certificates in Mozilla’s root store MUST use the CCADB and comply with the [CCADB Policy][CCADB-Policy].
 
 Mozilla has requirements for the use of the CCADB above and beyond those in the
