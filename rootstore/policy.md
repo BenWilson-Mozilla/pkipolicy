@@ -79,12 +79,14 @@ decision.
 CA operators whose certificates are included in Mozilla's root store MUST:
 
 1.  provide some service relevant to users of our software products;
-2.  comply with the CA/Browser Forum's Baseline Requirements for the Issuance and Management of Publicly‐Trusted TLS Server
-Certificates ("TLS BRs"), the Baseline Requirements for the Issuance and Management of Publicly‐Trusted S/MIME Certificates ("S/MIME BRs"), and for TLS certificates marked as Extended Validation, CA operators MUST comply with the [Guidelines for the Issuance and Management of Extended Validation Certificates][EVGLs].
+2.  comply with the CA/Browser Forum's [Baseline Requirements for the Issuance and Management of Publicly‐Trusted TLS Server
+Certificates][TLS-BRs] ("TLS BRs"), the [Baseline Requirements for the Issuance and Management of Publicly‐Trusted S/MIME Certificates][SMIME-BRs] ("S/MIME BRs"), and for TLS certificates marked as Extended Validation, CA operators MUST comply with the [Guidelines for the Issuance and Management of Extended Validation Certificates][EVGLs];
 3.  follow industry best practice for securing their networks and comply with the [CA/Browser Forum's Network and Certificate System Security Requirements][NSRs];
-4.  use multi-factor authentication to protect accounts capable of directly causing certificate issuance, consistent with the requirements of the S/MIME BRs and TLS BRs, or implement equivalent technical controls that restrict certificate issuance to a limited set of pre-approved domains or email addresses;  enforce multi-factor authentication for all accounts capable of causing
-5.  operate in accordance with applicable publicly available standards and audit criteria; *and*
-6.  ensure that all certificates within the scope of this policy comply with this policy.
+4.  publicly disclose, in a Certification Practice Statement (CPS) or a combined Certificate Policy / Certification Practice Statement (CP/CPS) (collectively, “CP/CPS Documentation”), the information required by this policy;
+5.  use multi-factor authentication to protect accounts capable of directly causing certificate issuance, consistent with the requirements of the S/MIME BRs and TLS BRs, or implement equivalent technical controls that restrict certificate issuance to a limited set of pre-approved domains or email addresses;
+6.  comply with the Common CA Database policy ("[CCADB Policy][CCADB-Policy]");
+7.  operate in accordance with applicable publicly available standards and audit criteria; *and*
+8.  ensure that all certificates within the scope of this policy comply with this policy.
 
 CA operators MUST follow and be aware of discussions in both the
 [Mozilla dev-security-policy][MDSP] forum and the [CCADB Public List][CCADB-List], where root store policies and program updates are announced and public discussions of root inclusion requests occur. They are encouraged, but not required, to contribute to those
@@ -104,21 +106,21 @@ meets or exceeds the following requirements:
     the entity submitting the request controls the email account
     associated with the email address referenced in the certificate
     *or* has been authorized by the email account holder to act on
-    the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the [CA/Browser Forum's S/MIME Baseline Requirements][SMIME-BRs] ("S/MIME BRs"). The CA operator's CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the procedure(s) 
+    the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the S/MIME BRs. The CA operator's CP/CPS Documentation MUST clearly specify the procedure(s) 
     that the CA employs to perform this verification;
 3.  for a certificate capable of being used for TLS-enabled servers, the CA
     MUST ensure that the applicant has registered all domain(s) referenced
     in the certificate or has been authorized by the domain registrant to
     act on their behalf. This MUST be done using one or more of the
     methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs]. The CA operator's
-    CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the procedure(s) that the CA employs, and
+   CP/CPS Documentation MUST clearly specify the procedure(s) that the CA employs, and
     each documented procedure MUST state which subsection of 3.2.2.4 it is
     complying with;
 4.  for a certificate capable of being used for TLS-enabled servers, the CA
     MUST ensure that the applicant has control over all IP Address(es) referenced
     in the certificate. This MUST be done using one or more of the
     methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. The CA operator's
-    CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the procedure(s) that the CA employs, and
+    CP/CPS Documentation MUST clearly specify the procedure(s) that the CA employs, and
     each documented procedure SHOULD state which subsection of 3.2.2.5 it is
     complying with; *and*
 
@@ -131,8 +133,7 @@ immediately discontinuing use of a method.
 ### 2.3 Baseline Requirements Conformance
 
 CA operations relating to issuance of certificates capable of being used for
-TLS-enabled servers MUST conform to the latest version of the [CA/Browser
-Forum's TLS BRs][TLS-BRs]. Certificates issued on or after September 1, 2023, that are capable of being used to digitally sign or encrypt email messages, and CA operations relating to the issuance of such certificates, MUST conform to the latest version of the [S/MIME BRs][SMIME-BRs]. In the event of inconsistency
+TLS-enabled servers MUST conform to the [TLS BRs][TLS-BRs], and those relating to the issuance of certificates capable of being used to digitally sign or encrypt email messages MUST conform to the latest version of the [S/MIME BRs][SMIME-BRs]. In the event of inconsistency
 between this policy's requirements and either the S/MIME BRs or TLS BRs,
 this policy's requirements take precedence. The following is a list of known
 places where this policy takes precedence over the S/MIME BRs and TLS BRs. If
@@ -331,7 +332,7 @@ CA operators with CA certificates capable of issuing working TLS server certific
 
 ## 4. Common CA Database
 
-Mozilla manages its root store using the Common CA Database (CCADB). CA operators with
+Mozilla manages its root store using the CCADB. CA operators with
 certificates in Mozilla’s root store MUST use the CCADB, and MUST comply with the
 latest published version of the [CCADB Policy][CCADB-Policy].
 
