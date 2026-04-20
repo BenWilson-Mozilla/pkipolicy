@@ -88,6 +88,8 @@ Certificates][TLS-BRs] ("TLS BRs"), the [Baseline Requirements for the Issuance 
 7.  operate in accordance with applicable publicly available standards and audit criteria; *and*
 8.  ensure that all certificates within the scope of this policy comply with this policy.
 
+In the event of inconsistency between this policy and other applicable requirements, this policy SHALL take precedence. Where this policy does not explicitly resolve such inconsistency, the most restrictive applicable requirement SHALL apply unless otherwise specified.
+ 
 CA operators MUST follow and be aware of discussions in both the
 [Mozilla dev-security-policy][MDSP] forum and the [CCADB Public List][CCADB-List], where root store policies and program updates are announced and public discussions of root inclusion requests occur. They are encouraged, but not required, to contribute to those
 discussions.
