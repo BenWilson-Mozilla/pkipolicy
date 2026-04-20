@@ -78,24 +78,13 @@ decision.
 
 CA operators whose certificates are included in Mozilla's root store MUST:
 
-1.  provide some service relevant to users of our software
-    products;
-2.  follow industry best practice for securing their networks, for example
-    by conforming to the [CA/Browser Forum's Network and Certificate System Security Requirements][NSRs] or a
-    successor document;
-3.  enforce multi-factor authentication for all accounts capable of causing
-    certificate issuance or performing Registration Authority or Delegated
-    Third Party functions, or implement technical controls operated by the CA
-    to restrict certificate issuance through the account to a limited set of
-    pre-approved domains or email addresses;
-4.  prior to issuing certificates, verify certificate
-    requests in a manner that we deem acceptable for the stated
-    purpose(s) of the certificates;
-5.  verify each dNSName or IPAddress in a SAN or commonName in server certificates in accordance with sections 3.2.2.4 and 3.2.2.5 of the CA/Browser Forum's [TLS Baseline Requirements][TLS-BRs] ("TLS BRs") at intervals of 398 days or less, and verify that all other information that is included in server certificates remains current and correct at intervals of 825 days or less;
-6.  otherwise operate in accordance with published criteria that we
-    deem acceptable; *and*
-7.  ensure that all certificates within the scope of this policy, 
-    as described in Section 1.1, adhere to this policy.
+1.  provide some service relevant to users of our software products;
+2.  comply with the CA/Browser Forum's Baseline Requirements for the Issuance and Management of Publicly‐Trusted TLS Server
+Certificates ("TLS BRs"), the Baseline Requirements for the Issuance and Management of Publicly‐Trusted S/MIME Certificates ("S/MIME BRs"), and for TLS certificates marked as Extended Validation, CA operators MUST comply with the [Guidelines for the Issuance and Management of Extended Validation Certificates][EVGLs].
+3.  follow industry best practice for securing their networks and comply with the [CA/Browser Forum's Network and Certificate System Security Requirements][NSRs];
+4.  use multi-factor authentication to protect accounts capable of directly causing certificate issuance, consistent with the requirements of the S/MIME BRs and TLS BRs, or implement equivalent technical controls that restrict certificate issuance to a limited set of pre-approved domains or email addresses;  enforce multi-factor authentication for all accounts capable of causing
+5.  operate in accordance with applicable publicly available standards and audit criteria; *and*
+6.  ensure that all certificates within the scope of this policy comply with this policy.
 
 CA operators MUST follow and be aware of discussions in both the
 [Mozilla dev-security-policy][MDSP] forum and the [CCADB Public List][CCADB-List], where root store policies and program updates are announced and public discussions of root inclusion requests occur. They are encouraged, but not required, to contribute to those
@@ -132,9 +121,7 @@ meets or exceeds the following requirements:
     CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the procedure(s) that the CA employs, and
     each documented procedure SHOULD state which subsection of 3.2.2.5 it is
     complying with; *and*
-5.  for certificates marked as Extended Validation, CA operators MUST comply with the
-    latest version of the [Guidelines for the Issuance and Management of
-    Extended Validation Certificates][EVGLs].
+
 
 Validation methods are occasionally found to contain security flaws. When this happens, 
 Mozilla expects CA operators to evaluate their practices and respond appropriately to mitigate the risk. 
