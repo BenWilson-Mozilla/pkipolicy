@@ -107,7 +107,7 @@ meets or exceeds the following requirements:
     associated with the email address referenced in the certificate
     *or* has been authorized by the email account holder to act on
     the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the S/MIME BRs;
-3.  for a certificate capable of being used for TLS-enabled servers, the CA MUST ensure that the applicant is authorized to use all domain names and has control over all IP addresses referenced in the certificate. Domain name validation MUST be performed using one or more of the methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs], and IP address validation MUST be performed using one or more of the methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. Each documented procedure MUST state which subsection of section 3.2.2.4 and section 3.2.2.5 it complies with, as applicable.
+3.  for a certificate capable of being used for TLS-enabled servers, the CA MUST ensure that the applicant is authorized to use all domain names and has control over all IP addresses referenced in the certificate. Domain name validation MUST be performed using one or more of the methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs], and IP address validation MUST be performed using one or more of the methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. Each documented procedure MUST state which subsection of section 3.2.2.4 and section 3.2.2.5 it complies with, as applicable; *and*
 4.  the CA operator’s CP/CPS Documentation MUST clearly specify the procedures used to perform validation, including the applicable methods from the S/MIME BRs or the TLS BRs and with sufficient detail to describe how those methods are implemented in practice.
 
 Validation methods are occasionally found to contain security flaws. When this happens, 
@@ -140,7 +140,7 @@ can be considered for addition or clarification.
 ### 2.4 Incidents
 
 When a CA operator fails to comply with any requirement of this policy - whether it be a misissuance, a procedural or operational issue, or any other variety of 
-non-compliance - the event is classified as an [incident][Incident]. CA operators MUST adhere to the [CCADB's Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report) (IRGs). CA operators MUST update Incident Reports and respond to questions or comments in accordance with the IRGs until the corresponding [Bugzilla][Bugzilla] bug is closed.
+non-compliance - the event is classified as an [incident][Incident]. CA operators MUST comply with the CCADB Policy and [CCADB Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report) (IRGs) for all requirements relating to the disclosure and handling of incidents, including maintaining incident reports and responding to questions or comments as required. CA operators MUST update Incident Reports and respond to questions or comments in accordance with the IRGs until the incident is considered resolved.
 
 Mozilla expects the timely remediation of the problems that caused or gave rise to an incident. In response to incidents, Mozilla MAY further require that the CA operator submit a plan of action with milestones or submit one or more additional audits to provide sufficient assurance that the incident has been remediated. Such audits MAY be expected sooner than the CA operator’s next scheduled audit, and thus MAY be expected to be for a period less than a year.
 
