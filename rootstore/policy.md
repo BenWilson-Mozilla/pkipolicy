@@ -140,7 +140,7 @@ can be considered for addition or clarification.
 ### 2.4 Incidents
 
 When a CA operator fails to comply with any requirement of this policy - whether it be a misissuance, a procedural or operational issue, or any other variety of 
-non-compliance - the event is classified as an [incident][Incident]. CA operators MUST comply with the CCADB Policy and [CCADB Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report) (IRGs) for all requirements relating to the disclosure and handling of incidents, including maintaining incident reports and responding to questions or comments as required. CA operators MUST update Incident Reports and respond to questions or comments in accordance with the IRGs until the incident is considered resolved.
+non-compliance - the event is classified as an [incident][Incident]. CA operators MUST comply with the [CCADB Policy][CCADB-Policy] and [CCADB Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report) (IRGs) for all requirements relating to the disclosure and handling of incidents, including maintaining incident reports and responding to questions or comments as required. CA operators MUST update Incident Reports and respond to questions or comments in accordance with the IRGs until the incident is considered resolved.
 
 Mozilla expects the timely remediation of the problems that caused or gave rise to an incident. In response to incidents, Mozilla MAY further require that the CA operator submit a plan of action with milestones or submit one or more additional audits to provide sufficient assurance that the incident has been remediated. Such audits MAY be expected sooner than the CA operator’s next scheduled audit, and thus MAY be expected to be for a period less than a year.
 
@@ -295,7 +295,7 @@ Therefore:
     deal with these documents, and any later versions for root certificates
     that are included in Mozilla's root store, under CC-BY-ND 4.0;
 
-4.  all CPs, CPSes, and combined CP/CPSes MUST be reviewed and updated as necessary at least once every 365 days, as required by the S/MIME BRs or TLS BRs. CA operators MUST indicate that this has
+4.  all CPs, CPSes, and combined CP/CPSes MUST be reviewed and updated as necessary at least once every 365 days, consistent with the requirements of the S/MIME BRs or TLS BRs. CA operators MUST indicate that this has
 happened by incrementing the version number and adding a dated changelog entry,
 even if no other changes are made to the document;
 
@@ -317,16 +317,15 @@ CA operators with CA certificates capable of issuing working TLS server certific
 
 ## 4. Common CA Database
 
-Mozilla manages its root store using the CCADB. CA operators with
-certificates in Mozilla’s root store MUST use the CCADB, and MUST comply with the
-latest published version of the [CCADB Policy][CCADB-Policy].
+The CCADB serves as the authoritative repository for certain operational data about publicly trusted CAs. Mozilla uses the CCADB to support management of its root store. CA operators with
+certificates in Mozilla’s root store MUST use the CCADB and comply with the [CCADB Policy][CCADB-Policy].
 
 Mozilla has requirements for the use of the CCADB above and beyond those in the
 CCADB Policy, as indicated below in this section 4.
 
 ### 4.1 Additional Requirements
 
-* If the revocation of an intermediate certificate chaining up to a root in
+If the revocation of an intermediate certificate chaining up to a root in
 Mozilla’s root store is due to a security concern, as well as performing the
 actions defined in the CCADB Policy, a [Vulnerability Disclosure][Vulnerability-Disclosure] MUST be filed as [a secure bug in Bugzilla][Sec-Bugs].
 
@@ -607,7 +606,7 @@ each name having been validated according to section
 
 #### 5.3.2 Publicly Disclosed and Audited
 
-The operator of a CA certificate included in Mozilla’s root store MUST publicly disclose in the CCADB all CA certificates it issues that chain up to that CA certificate trusted in Mozilla’s root store that are technically capable of issuing working server or email certificates, including such CA certificates that are revoked but not yet expired and those CA certificates that share the same key pair whether they are self-signed, doppelgänger, reissued, cross-signed, or other roots. The CA operator with a certificate included in Mozilla’s root store MUST disclose such CA certificate in the CCADB within one week of certificate creation, and before any such CA is allowed to issue certificates. Name-constrained CA certificates that are technically capable of issuing working server or email certificates that were exempt from disclosure in previous versions of this policy MUST also be disclosed in the CCADB, but the submission of an audit report under section 3.1 of this policy is not required. 
+The operator of a CA certificate included in Mozilla’s root store MUST publicly disclose in the CCADB all CA certificates it issues that chain up to that CA certificate trusted in Mozilla’s root store that are technically capable of issuing working server or email certificates, including such CA certificates that are revoked but not yet expired and those CA certificates that share the same key pair whether they are self-signed, doppelgänger, reissued, cross-signed, or other roots. The CA operator with a certificate included in Mozilla’s root store MUST disclose such CA certificate in the CCADB within seven (7) days of certificate creation, and before any such CA is allowed to issue certificates. Name-constrained CA certificates that are technically capable of issuing working server or email certificates that were exempt from disclosure in previous versions of this policy MUST also be disclosed in the CCADB, but the submission of an audit report under section 3.1 of this policy is not required. 
 
 All disclosure MUST be made freely available and without additional requirements, including, but not limited to, registration, legal agreements, or restrictions on redistribution of the certificates in whole or in part.
 
