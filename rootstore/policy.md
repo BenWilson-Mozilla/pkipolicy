@@ -106,24 +106,9 @@ meets or exceeds the following requirements:
     the entity submitting the request controls the email account
     associated with the email address referenced in the certificate
     *or* has been authorized by the email account holder to act on
-    the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the S/MIME BRs. The CA operator's CP/CPS Documentation MUST clearly specify the procedure(s) 
-    that the CA employs to perform this verification;
-3.  for a certificate capable of being used for TLS-enabled servers, the CA
-    MUST ensure that the applicant has registered all domain(s) referenced
-    in the certificate or has been authorized by the domain registrant to
-    act on their behalf. This MUST be done using one or more of the
-    methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs]. The CA operator's
-   CP/CPS Documentation MUST clearly specify the procedure(s) that the CA employs, and
-    each documented procedure MUST state which subsection of 3.2.2.4 it is
-    complying with;
-4.  for a certificate capable of being used for TLS-enabled servers, the CA
-    MUST ensure that the applicant has control over all IP Address(es) referenced
-    in the certificate. This MUST be done using one or more of the
-    methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. The CA operator's
-    CP/CPS Documentation MUST clearly specify the procedure(s) that the CA employs, and
-    each documented procedure SHOULD state which subsection of 3.2.2.5 it is
-    complying with; *and*
-
+    the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the S/MIME BRs;
+3.  for a certificate capable of being used for TLS-enabled servers, the CA MUST ensure that the applicant is authorized to use all domain names and has control over all IP addresses referenced in the certificate. Domain name validation MUST be performed using one or more of the methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs], and IP address validation MUST be performed using one or more of the methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. Each documented procedure MUST state which subsection of section 3.2.2.4 and section 3.2.2.5 it complies with, as applicable.
+4.  the CA operator’s CP/CPS Documentation MUST clearly specify the procedures used to perform validation, including the applicable methods from the S/MIME BRs or the TLS BRs and with sufficient detail to describe how those methods are implemented in practice.
 
 Validation methods are occasionally found to contain security flaws. When this happens, 
 Mozilla expects CA operators to evaluate their practices and respond appropriately to mitigate the risk. 
