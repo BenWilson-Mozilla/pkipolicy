@@ -597,8 +597,7 @@ CAs MUST NOT sign SHA-1 hashes over other data, including CT pre-certificates.
 
 ### 5.2 Forbidden and Required Practices
 
-CA operations MUST at all times be in accordance with the applicable CP
-and CPS (or combined CP/CPS).
+CA operations MUST at all times be in accordance with the applicable CP/CPS Documentation.
 
 CA operators MUST maintain a certificate hierarchy such that an included
 root certificate does not directly issue end entity certificates to
@@ -673,7 +672,7 @@ usage, then to be considered technically
 constrained, it MUST comply with section 7.1.5 of the [S/MIME BRs][SMIME-BRs] and include the Name Constraints X.509v3 extension with
 constraints on rfc822Name, with at least one name in permittedSubtrees,
 each name having been validated according to section
-3.2.2 of the [S/MIME BRs][SMIME-BRs]. The values id-kp-serverAuth and anyExtendedKeyUsage MUST NOT be present. The id-kp-clientAuth EKU MAY be present. Other values that the CA is allowed to use and are documented in the CA’s CP, CPS, or combined CP/CPS MAY be present.
+3.2.2 of the [S/MIME BRs][SMIME-BRs]. The values id-kp-serverAuth and anyExtendedKeyUsage MUST NOT be present. The id-kp-clientAuth EKU MAY be present. Other values that the CA is allowed to use and that are documented in the CA’s CP/CPS Documentation MAY be present.
 
 #### 5.3.2 Publicly Disclosed and Audited
 
@@ -720,7 +719,7 @@ via an Online Certificate Status Protocol (OCSP) service:
     before or equal to the notAfter date of the CA certificate which
     issued the certificate that the BasicOCSPResponse is for.
 
-Section 4.9.12 of a CA operator's CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the methods that parties may use to demonstrate private key compromise.
+Section 4.9.12 of a CA operator's CP/CPS Documentation MUST clearly specify the methods that parties may use to demonstrate private key compromise.
 
 ### 6.1 TLS
 
@@ -827,7 +826,7 @@ MUST include the following:
     issues Extended Validation certificates within the certificate hierarchy
     associated with the CA certificate and, if so, the CA/Browser Forum EV policy
     OID of 2.23.140.1.1 associated with the CA certificate;
-4.  links to the CP and CPS (or combined CP/CPS) for the CA or CAs in question; 
+4.  links to the CP/CPS Documentation for the CA or CAs in question; 
 5.  an auditor-witnessed root key generation ceremony report and contiguous 
     period-of-time audit reports performed thereafter no less frequently than 
     annually;
@@ -983,7 +982,7 @@ certificate's private key until Mozilla has been provided with an audit
 statement (or opinion letter) confirming successful transfer of the root
 certificate and key. Issuance MUST NOT occur until the transferee
 has provided all the information required by the CCADB, and demonstrated to
-Mozilla that they have all the appropriate audits, CP/CPS documents, and other
+Mozilla that they have all the appropriate audits, CP/CPS Documentation, and other
 systems in place.
 
 The transferor MUST notify Mozilla about any necessary changes to EV status or
@@ -1023,7 +1022,7 @@ that the private key remained secure throughout the transfer, and that the root
 certificate is ready to resume issuance. This requirement MAY be met by
 including the transferred root certificate and key in the new owner's regular
 audits or by getting a point-in-time audit; *and*
-* send links to the updated CP, CPS, and the updated audit statements, opinion
+* send links to the updated CP/CPS Documentation and the updated audit statements, opinion
 letter, or point-in-time audit statement to Mozilla.
 
 The regular annual audit statements MUST still happen in a timely manner.
