@@ -78,25 +78,18 @@ decision.
 
 CA operators whose certificates are included in Mozilla's root store MUST:
 
-1.  provide some service relevant to users of our software
-    products;
-2.  follow industry best practice for securing their networks, for example
-    by conforming to the [CA/Browser Forum's Network and Certificate System Security Requirements][NSRs] or a
-    successor document;
-3.  enforce multi-factor authentication for all accounts capable of causing
-    certificate issuance or performing Registration Authority or Delegated
-    Third Party functions, or implement technical controls operated by the CA
-    to restrict certificate issuance through the account to a limited set of
-    pre-approved domains or email addresses;
-4.  prior to issuing certificates, verify certificate
-    requests in a manner that we deem acceptable for the stated
-    purpose(s) of the certificates;
-5.  verify each dNSName or IPAddress in a SAN or commonName in server certificates in accordance with sections 3.2.2.4 and 3.2.2.5 of the CA/Browser Forum's [TLS Baseline Requirements][TLS-BRs] ("TLS BRs") at intervals of 398 days or less, and verify that all other information that is included in server certificates remains current and correct at intervals of 825 days or less;
-6.  otherwise operate in accordance with published criteria that we
-    deem acceptable; *and*
-7.  ensure that all certificates within the scope of this policy, 
-    as described in Section 1.1, adhere to this policy.
+1.  provide some service relevant to users of our software products;
+2.  comply with the CA/Browser Forum's [Baseline Requirements for the Issuance and Management of Publicly‐Trusted TLS Server
+Certificates][TLS-BRs] ("TLS BRs"), the [Baseline Requirements for the Issuance and Management of Publicly‐Trusted S/MIME Certificates][SMIME-BRs] ("S/MIME BRs"), and for TLS certificates marked as Extended Validation, CA operators MUST comply with the [Guidelines for the Issuance and Management of Extended Validation Certificates][EVGLs];
+3.  follow industry best practice for securing their networks and comply with the [CA/Browser Forum's Network and Certificate System Security Requirements][NSRs];
+4.  publicly disclose, in a Certification Practice Statement (CPS) or a combined Certificate Policy / Certification Practice Statement (CP/CPS) (collectively, “CP/CPS Documentation”), the information required by this policy;
+5.  use multi-factor authentication to protect accounts capable of directly causing certificate issuance, consistent with the requirements of the S/MIME BRs and TLS BRs, or implement equivalent technical controls that restrict certificate issuance to a limited set of pre-approved domains or email addresses;
+6.  comply with the Common CA Database policy ("[CCADB Policy][CCADB-Policy]");
+7.  operate in accordance with applicable publicly available standards and audit criteria; *and*
+8.  ensure that all certificates within the scope of this policy comply with this policy.
 
+In the event of inconsistency between this policy and other applicable requirements, this policy SHALL take precedence. Where this policy does not explicitly resolve such inconsistency, the most restrictive applicable requirement SHALL apply unless otherwise specified.
+ 
 CA operators MUST follow and be aware of discussions in both the
 [Mozilla dev-security-policy][MDSP] forum and the [CCADB Public List][CCADB-List], where root store policies and program updates are announced and public discussions of root inclusion requests occur. They are encouraged, but not required, to contribute to those
 discussions.
@@ -115,26 +108,9 @@ meets or exceeds the following requirements:
     the entity submitting the request controls the email account
     associated with the email address referenced in the certificate
     *or* has been authorized by the email account holder to act on
-    the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the [CA/Browser Forum's S/MIME Baseline Requirements][SMIME-BRs] ("S/MIME BRs"). The CA operator's CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the procedure(s) 
-    that the CA employs to perform this verification;
-3.  for a certificate capable of being used for TLS-enabled servers, the CA
-    MUST ensure that the applicant has registered all domain(s) referenced
-    in the certificate or has been authorized by the domain registrant to
-    act on their behalf. This MUST be done using one or more of the
-    methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs]. The CA operator's
-    CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the procedure(s) that the CA employs, and
-    each documented procedure MUST state which subsection of 3.2.2.4 it is
-    complying with;
-4.  for a certificate capable of being used for TLS-enabled servers, the CA
-    MUST ensure that the applicant has control over all IP Address(es) referenced
-    in the certificate. This MUST be done using one or more of the
-    methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. The CA operator's
-    CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the procedure(s) that the CA employs, and
-    each documented procedure SHOULD state which subsection of 3.2.2.5 it is
-    complying with; *and*
-5.  for certificates marked as Extended Validation, CA operators MUST comply with the
-    latest version of the [Guidelines for the Issuance and Management of
-    Extended Validation Certificates][EVGLs].
+    the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the S/MIME BRs;
+3.  for a certificate capable of being used for TLS-enabled servers, the CA MUST ensure that the applicant is authorized to use all domain names and has control over all IP addresses referenced in the certificate. Domain name validation MUST be performed using one or more of the methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs], and IP address validation MUST be performed using one or more of the methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. Each documented procedure MUST state which subsection of section 3.2.2.4 and section 3.2.2.5 it complies with, as applicable; *and*
+4.  the CA operator’s CP/CPS Documentation MUST clearly specify the procedures used to perform validation, including the applicable methods from the S/MIME BRs or the TLS BRs and with sufficient detail to describe how those methods are implemented in practice.
 
 Validation methods are occasionally found to contain security flaws. When this happens, 
 Mozilla expects CA operators to evaluate their practices and respond appropriately to mitigate the risk. 
@@ -144,8 +120,7 @@ immediately discontinuing use of a method.
 ### 2.3 Baseline Requirements Conformance
 
 CA operations relating to issuance of certificates capable of being used for
-TLS-enabled servers MUST conform to the latest version of the [CA/Browser
-Forum's TLS BRs][TLS-BRs]. Certificates issued on or after September 1, 2023, that are capable of being used to digitally sign or encrypt email messages, and CA operations relating to the issuance of such certificates, MUST conform to the latest version of the [S/MIME BRs][SMIME-BRs]. In the event of inconsistency
+TLS-enabled servers MUST conform to the [TLS BRs][TLS-BRs], and those relating to the issuance of certificates capable of being used to digitally sign or encrypt email messages MUST conform to the latest version of the [S/MIME BRs][SMIME-BRs]. In the event of inconsistency
 between this policy's requirements and either the S/MIME BRs or TLS BRs,
 this policy's requirements take precedence. The following is a list of known
 places where this policy takes precedence over the S/MIME BRs and TLS BRs. If
@@ -167,7 +142,7 @@ can be considered for addition or clarification.
 ### 2.4 Incidents
 
 When a CA operator fails to comply with any requirement of this policy - whether it be a misissuance, a procedural or operational issue, or any other variety of 
-non-compliance - the event is classified as an [incident][Incident]. CA operators MUST adhere to the [CCADB's Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report) (IRGs). CA operators MUST update Incident Reports and respond to questions or comments in accordance with the IRGs until the corresponding [Bugzilla][Bugzilla] bug is closed.
+non-compliance - the event is classified as an [incident][Incident]. CA operators MUST comply with the [CCADB Policy][CCADB-Policy] and [CCADB Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report) (IRGs) for all requirements relating to the disclosure and handling of incidents, including maintaining incident reports and responding to questions or comments as required. CA operators MUST update Incident Reports and respond to questions or comments in accordance with the IRGs until the incident is considered resolved.
 
 Mozilla expects the timely remediation of the problems that caused or gave rise to an incident. In response to incidents, Mozilla MAY further require that the CA operator submit a plan of action with milestones or submit one or more additional audits to provide sufficient assurance that the incident has been remediated. Such audits MAY be expected sooner than the CA operator’s next scheduled audit, and thus MAY be expected to be for a period less than a year.
 
@@ -322,7 +297,7 @@ Therefore:
     deal with these documents, and any later versions for root certificates
     that are included in Mozilla's root store, under CC-BY-ND 4.0;
 
-4.  all CPs, CPSes, and combined CP/CPSes MUST be reviewed and updated as necessary at least once every 365 days, as required by the S/MIME BRs or TLS BRs. CA operators MUST indicate that this has
+4.  all CPs, CPSes, and combined CP/CPSes MUST be reviewed and updated as necessary at least once every 365 days, consistent with the requirements of the S/MIME BRs or TLS BRs. CA operators MUST indicate that this has
 happened by incrementing the version number and adding a dated changelog entry,
 even if no other changes are made to the document;
 
@@ -344,18 +319,15 @@ CA operators with CA certificates capable of issuing working TLS server certific
 
 ## 4. Common CA Database
 
-Mozilla manages its root store using the Common CA Database (CCADB). CA operators with
-certificates in Mozilla’s root store MUST use the CCADB, and are bound by the
-latest published version of the [CCADB Policy][CCADB-Policy].
+The CCADB serves as a centralized repository for key operational and compliance data about publicly trusted CAs. Mozilla uses the CCADB as part of its root store management process. CA operators with
+certificates in Mozilla’s root store MUST use the CCADB and comply with the [CCADB Policy][CCADB-Policy].
 
 Mozilla has requirements for the use of the CCADB above and beyond those in the
 CCADB Policy, as indicated below in this section 4.
 
 ### 4.1 Additional Requirements
 
-* CA operators with intermediate CA certificates that are capable of issuing TLS certificates chaining up to root certificates in Mozilla's root store SHALL populate the "Pertaining to Certificates Issued by This CA" section of the CCADB records corresponding to those intermediate CA certificates with either the CRL Distribution Point for the "Full CRL Issued By This CA" or a "JSON Array of Partitioned CRLs" within 7 days of such intermediate CA issuing its first certificate;
-* Each CRL referenced by the JSON Array of Partitioned CRLs MUST contain a critical Issuing Distribution Point extension as described in section 6.1.2; *and*
-* if the revocation of an intermediate certificate chaining up to a root in
+If the revocation of an intermediate certificate chaining up to a root in
 Mozilla’s root store is due to a security concern, as well as performing the
 actions defined in the CCADB Policy, a [Vulnerability Disclosure][Vulnerability-Disclosure] MUST be filed as [a secure bug in Bugzilla][Sec-Bugs].
 
@@ -636,7 +608,7 @@ each name having been validated according to section
 
 #### 5.3.2 Publicly Disclosed and Audited
 
-The operator of a CA certificate included in Mozilla’s root store MUST publicly disclose in the CCADB all CA certificates it issues that chain up to that CA certificate trusted in Mozilla’s root store that are technically capable of issuing working server or email certificates, including such CA certificates that are revoked but not yet expired and those CA certificates that share the same key pair whether they are self-signed, doppelgänger, reissued, cross-signed, or other roots. The CA operator with a certificate included in Mozilla’s root store MUST disclose such CA certificate in the CCADB within one week of certificate creation, and before any such CA is allowed to issue certificates. Name-constrained CA certificates that are technically capable of issuing working server or email certificates that were exempt from disclosure in previous versions of this policy MUST also be disclosed in the CCADB, but the submission of an audit report under section 3.1 of this policy is not required. 
+The operator of a CA certificate included in Mozilla’s root store MUST publicly disclose in the CCADB all CA certificates it issues that chain up to that CA certificate trusted in Mozilla’s root store that are technically capable of issuing working server or email certificates, including such CA certificates that are revoked but not yet expired and those CA certificates that share the same key pair whether they are self-signed, doppelgänger, reissued, cross-signed, or other roots. The CA operator with a certificate included in Mozilla’s root store MUST disclose such CA certificate in the CCADB within seven (7) days of certificate creation, and before any such CA is allowed to issue certificates. Name-constrained CA certificates that are technically capable of issuing working server or email certificates that were exempt from disclosure in previous versions of this policy MUST also be disclosed in the CCADB, but the submission of an audit report under section 3.1 of this policy is not required. 
 
 All disclosure MUST be made freely available and without additional requirements, including, but not limited to, registration, legal agreements, or restrictions on redistribution of the certificates in whole or in part.
 
