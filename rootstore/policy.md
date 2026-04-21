@@ -930,21 +930,32 @@ advance in order to avoid unfortunate surprises.
 
 In addition, one or more of the following sections MAY apply.
 
-### 8.1 Change in Legal Ownership
+### 8.1 Change in Ownership or Control
 
-This section applies when one company buys or takes a controlling stake in
-a CA or CA operator, or when an organization obtains control of a CA key pair that is 
-within the scope of Mozilla's root store, unless it is constrained in 
-compliance with section 5.3.1 of this policy.
+This section applies when there is a change in ownership or control of a CA or CA operator, or when custody or control of a CA private key corresponding to a certificate included in Mozilla’s root store is transferred, unless the key is constrained in accordance with Section 5.3.1.
 
-Mozilla MUST be notified of any resulting changes in the CA operator's CP, CPS, or combined CP/CPS.
+The CA operator MUST notify Mozilla of such changes and provide updated CP/CPS documentation reflecting those changes.
 
-If the receiving or acquiring company is new to the Mozilla root store, 
-it MUST demonstrate compliance with the entirety of this policy. There
-MUST be a public discussion regarding its admittance to the root store. 
-If Mozilla reaches a positive conclusion after public discussion, then the affected certificate(s) MAY remain in the root store. If the entire 
-CA operation is not included in the scope of the transaction, issuance is not
-permitted until the discussion has been resolved with a positive conclusion.
+The CA operator, and any receiving or acquiring entity that assumes responsibility for the CA operations, MUST ensure continued compliance with the entirety of this policy.
+
+Mozilla will evaluate whether the transaction introduces new or increased risk to the CA operator’s continued compliance, including risks arising from changes in ownership, governance, operational control, or certificate issuance practices. In evaluating risk, Mozilla will consider the extent to which the transaction preserves existing audited systems, controls, and personnel, and whether the acquiring entity has experience operating publicly trusted CAs under applicable industry and root store requirements.
+
+In making its determination, Mozilla MAY consider factors including, but not limited to:
+
+1. Changes in ownership, controlling interest, governance, trusted roles, or compliance oversight;
+2. Integration or migration of PKI systems, infrastructure, personnel, or cryptographic key control;
+3. Changes to certificate issuance practices, including CP/CPS or validation models; and
+4. The scope, continuity, or effectiveness of audit coverage, and any other factors that may affect the reliability, integrity, or trustworthiness of the CA operator.
+
+An acquisition of a CA operator as a going concern, where there are no material changes to its operations, governance, or certificate issuance practices, does not, by itself, indicate that the transaction introduces new or increased risk.
+
+Where a transaction introduces new or increased risk, there MUST be a public discussion regarding the continued inclusion of the affected certificates in Mozilla’s root store; otherwise, a public discussion is not required.
+
+Mozilla MAY, at its discretion, require a public discussion for any transaction where it determines that additional transparency or community input is necessary.
+
+If Mozilla reaches a positive conclusion following any public discussion, the affected certificate(s) MAY remain in the root store. If concerns are identified, Mozilla MAY impose conditions, require remediation, or take other action as appropriate, including removal of the certificate(s) from the root store.
+
+If the transaction prevents Mozilla from completing its evaluation or results in unresolved concerns, the CA operator MUST NOT issue new subordinate or end-entity certificates until those concerns are resolved to Mozilla’s satisfaction.
 
 ### 8.2 Change in Operational Personnel
 
