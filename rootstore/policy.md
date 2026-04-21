@@ -806,9 +806,7 @@ MUST include the following:
     associated with the CA certificate and, if so, the CA/Browser Forum EV policy
     OID of 2.23.140.1.1 associated with the CA certificate;
 4.  links to the CP/CPS Documentation for the CA or CAs in question; 
-5.  an auditor-witnessed root key generation ceremony report and contiguous 
-    period-of-time audit reports performed thereafter no less frequently than 
-    annually;
+5.  an auditor-witnessed root key generation ceremony report, demonstrating that the root CA key pair was generated within five (5) years prior to the submission of the root inclusion request, and continuous period-of-time audit reports, showing audit coverage immediately after key generation, with no gaps in the periods under audit, issued no less frequently than annually (such period-of-time audit reports are required only in accordance with the CA operator’s regular audit reporting cycle and are not required to be issued immediately following the key generation event);
 6.  evidence of automated certificate issuance support, as specified above (if seeking enablement of the websites trust bit);
     *and*
 7.  information as to how the CA operator has fulfilled the requirements
