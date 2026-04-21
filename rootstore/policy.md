@@ -277,18 +277,15 @@ Each Audit Report MUST be accompanied by a statement of audit team qualification
 
 ### 3.3 CPs and CPSes
 
-We rely on publicly disclosed documentation (e.g., in a Certificate Policy and
-Certification Practice Statement) to ascertain that our requirements are met.
+We rely on publicly disclosed documentation in a Certification Practice Statement (CPS) or a combined Certificate Policy/Certification Practice Statement (CP/CPS) ("CP/CPS Documentation") to ascertain that our requirements are met.
 Therefore:
 
-1.  the publicly disclosed documentation MUST provide sufficient
-    information for Mozilla to determine whether and how the CA operator
-    complies with this policy, including a description of the steps
-    taken by the CA to verify certificate requests;
+1.  CP/CPS Documentation MUST provide information in a manner that is explicit, bounded, auditable, and in a manner that is sufficient for Mozilla to determine whether and how the CA operator
+    complies with this policy and other applicable requirements;
 
 2.  CA operators MUST maintain such documentation in a structured, text-based format suitable for version control (e.g. Markdown, AsciiDoc, or equivalent) and host it in a publicly accessible repository or equivalent system that preserves version history;
 
-3.  the documentation MUST be made available to Mozilla under one
+3.  CP/CPS Documentation MUST be made available to Mozilla under one
     of the following Creative Commons licenses (or later versions):
 
        * Attribution ([CC-BY]) 4.0;
@@ -297,26 +294,70 @@ Therefore:
        * Public Domain Dedication ([CC-0]) 1.0; 
 
     or a set of equally permissive licensing terms accepted by Mozilla in
-    writing. If no such license is indicated, the fact of application is
-    considered as permission from the CA operator to allow Mozilla and the public to
-    deal with these documents, and any later versions for root certificates
-    that are included in Mozilla's root store, under CC-BY-ND 4.0;
+    writing. If no such license is indicated, the fact of application for root inclusion is
+    considered permission from the CA operator to allow Mozilla and the public to
+    deal with CP/CPS Documentation under CC-BY-ND 4.0;
 
-4.  all CPs, CPSes, and combined CP/CPSes MUST be reviewed and updated as necessary at least once every 365 days, consistent with the requirements of the S/MIME BRs or TLS BRs. CA operators MUST indicate that this has
+4.  CP/CPS Documentation MUST be reviewed and updated as necessary at least once every 365 days, as required by the S/MIME BRs or TLS BRs. CA operators MUST indicate that this has
 happened by incrementing the version number and adding a dated changelog entry,
 even if no other changes are made to the document;
 
-5.  all CPs, CPSes, and combined CP/CPSes MUST be structured according to the common outline set forth in [section 6 of RFC 3647][3647-6], as may be amended by the CA/Browser Forum's TLS BRs or its S/MIME BRs, and MUST:
+5.  CP/CPS Documentation MUST be structured according to the common outline set forth in [section 6 of RFC 3647][3647-6], as may be amended by the CA/Browser Forum's TLS BRs or its S/MIME BRs, and MUST:
 
        * include at least every section and subsection defined in [section 6 of RFC 3647][3647-6]; 
        * only use the words "No Stipulation" to mean that the particular document 
 imposes no requirements related to that section; and
        * contain no sections that are entirely blank, having no text or subsections; 
 
-6.  CA operators MUST provide a way to clearly determine which CP, CPS, or combined CP/CPS 
-applies to each of its root and intermediate certificates; *and*
+6.  CP/CPS Documentation MUST provide a way to clearly determine with sufficient clarity which operational practices and profiles apply to which root CA and intermediate CA certificates; *and*
 
-7.  CA operators SHALL maintain links to all historic versions of each CP and CPS (or CP/CPS) from the creation of included CA certificates, regardless of changes in ownership or control of such CA certificates, until the entire CA certificate hierarchies (i.e. end entity certificates, intermediate CA certificates, and cross-certificates) operated in accordance with such documents are no longer trusted by the Mozilla root store. For CA certificates that were included in Mozilla's root store before December 31, 2022, the CA Operator shall maintain links in their online repositories to all reasonably available historic versions of CPs and CPSes (or CP/CPSes) from creation of the included CA certificates.
+7.  CA operators SHALL maintain links to all historic versions of CP/CPS Documentation from the creation of included CA certificates, regardless of changes in ownership or control of such CA certificates, until the entire CA certificate hierarchies (i.e. end entity certificates, intermediate CA certificates, and cross-certificates) operated in accordance with such documents are no longer trusted by the Mozilla root store. For CA certificates that were included in Mozilla's root store before December 31, 2022, the CA Operator shall maintain links in their online repositories to all reasonably available historic versions of CP/CPS Documentation from creation of the included CA certificates.
+
+#### 3.3.1 Sufficiency of Disclosure
+
+To satisfy Section 3.3(1), CP/CPS Documentation MUST contain sufficient CA-specific detail to allow a technically competent reviewer to understand how the CA operator implements applicable requirements and to evaluate conformance without requiring interpretive reconstruction across multiple external documents.
+
+CP/CPS Documentation MUST describe the CA operator’s implementation commitments, including relevant operational parameters, constraints, and design choices, particularly in areas where applicable requirements permit discretion or variation.
+
+#### 3.3.2 Normative References and Incorporation by Reference
+
+A CA operator MAY incorporate external standards (e.g., CA/Browser Forum Requirements, RFCs, and other applicable policies) by reference for normative obligations and shared definitions.
+
+However, incorporation by reference MUST NOT be used as a substitute for describing CA-specific implementation commitments. CP/CPS Documentation MUST clearly identify incorporated documents and enable a reviewer to determine how the CA operator’s practices correspond to those requirements.
+
+#### 3.3.3 Implementation Commitments
+
+CP/CPS Documentation MUST explicitly describe those aspects of the CA operator’s practices that materially affect certificate issuance, validation, revocation, and status services.
+
+Such disclosures MUST be:
+
+* Explicit (clearly stating what the CA does),
+* Bounded (defining limits, thresholds, or constraints where applicable), and
+* Testable (capable of being evaluated through audit or independent analysis).
+
+Subjective or non-measurable language (e.g., “as appropriate,” “periodically,” “a few,” “promptly”) MUST NOT be used in place of defined operational parameters where those parameters can reasonably be specified.
+
+#### 3.3.4 Organization and Scope
+
+CP/CPS Documentation MUST be organized and scoped such that a reviewer can determine:
+
+* which legal entity and CA operator are responsible for the described practices;
+* which root certificates, subordinate CAs, and certificate types or profiles are covered; and
+* how related documents, if any, apply to specific hierarchies.
+
+Documentation MUST not require a reviewer to assemble material operational commitments from numerous disparate documents without clear scoping and cross-reference.
+
+#### 3.3.5 Certificate and Revocation Profiles
+
+CP/CPS Documentation MUST describe, or clearly reference, the certificate, CRL, and OCSP profiles used by the CA operator.
+
+Such profiles MAY be maintained in a separate CA-maintained appendix or companion document, provided that the referenced material is publicly accessible, clearly in-scope, versioned, and sufficient to describe the technical characteristics and constraints of issued certificates and revocation artifacts.
+
+#### 3.3.6 Accuracy and Currency
+
+CP/CPS Documentation MUST accurately reflect the CA operator’s current practices, systems, and operational constraints.
+
+Material changes to implementation commitments MUST be reflected through appropriate updates, including version increments and changelog entries, so that external parties can determine when substantive changes have occurred.
 
 ### 3.4 Compliance Self-Assessments
 
@@ -533,8 +574,7 @@ CAs MUST NOT sign SHA-1 hashes over other data, including CT pre-certificates.
 
 ### 5.2 Forbidden and Required Practices
 
-CA operations MUST at all times be in accordance with the applicable CP
-and CPS (or combined CP/CPS).
+CA operations MUST at all times be in accordance with the applicable CP/CPS Documentation.
 
 CA operators MUST maintain a certificate hierarchy such that an included
 root certificate does not directly issue end entity certificates to
@@ -609,7 +649,7 @@ usage, then to be considered technically
 constrained, it MUST comply with section 7.1.5 of the [S/MIME BRs][SMIME-BRs] and include the Name Constraints X.509v3 extension with
 constraints on rfc822Name, with at least one name in permittedSubtrees,
 each name having been validated according to section
-3.2.2 of the [S/MIME BRs][SMIME-BRs]. The values id-kp-serverAuth and anyExtendedKeyUsage MUST NOT be present. The id-kp-clientAuth EKU MAY be present. Other values that the CA is allowed to use and are documented in the CA’s CP, CPS, or combined CP/CPS MAY be present.
+3.2.2 of the [S/MIME BRs][SMIME-BRs]. The values id-kp-serverAuth and anyExtendedKeyUsage MUST NOT be present. The id-kp-clientAuth EKU MAY be present. Other values that the CA is allowed to use and that are documented in the CA’s CP/CPS Documentation MAY be present.
 
 #### 5.3.2 Publicly Disclosed and Audited
 
@@ -656,7 +696,7 @@ via an Online Certificate Status Protocol (OCSP) service:
     before or equal to the notAfter date of the CA certificate which
     issued the certificate that the BasicOCSPResponse is for.
 
-Section 4.9.12 of a CA operator's CPS (or, if applicable, the CP or CP/CPS) MUST clearly specify the methods that parties may use to demonstrate private key compromise.
+Section 4.9.12 of a CA operator's CP/CPS Documentation MUST clearly specify the methods that parties may use to demonstrate private key compromise.
 
 ### 6.1 TLS
 
@@ -763,7 +803,7 @@ MUST include the following:
     issues Extended Validation certificates within the certificate hierarchy
     associated with the CA certificate and, if so, the CA/Browser Forum EV policy
     OID of 2.23.140.1.1 associated with the CA certificate;
-4.  links to the CP and CPS (or combined CP/CPS) for the CA or CAs in question; 
+4.  links to the CP/CPS Documentation for the CA or CAs in question; 
 5.  an auditor-witnessed root key generation ceremony report and contiguous 
     period-of-time audit reports performed thereafter no less frequently than 
     annually;
@@ -919,7 +959,7 @@ certificate's private key until Mozilla has been provided with an audit
 statement (or opinion letter) confirming successful transfer of the root
 certificate and key. Issuance MUST NOT occur until the transferee
 has provided all the information required by the CCADB, and demonstrated to
-Mozilla that they have all the appropriate audits, CP/CPS documents, and other
+Mozilla that they have all the appropriate audits, CP/CPS Documentation, and other
 systems in place.
 
 The transferor MUST notify Mozilla about any necessary changes to EV status or
@@ -959,7 +999,7 @@ that the private key remained secure throughout the transfer, and that the root
 certificate is ready to resume issuance. This requirement MAY be met by
 including the transferred root certificate and key in the new owner's regular
 audits or by getting a point-in-time audit; *and*
-* send links to the updated CP, CPS, and the updated audit statements, opinion
+* send links to the updated CP/CPS Documentation and the updated audit statements, opinion
 letter, or point-in-time audit statement to Mozilla.
 
 The regular annual audit statements MUST still happen in a timely manner.
