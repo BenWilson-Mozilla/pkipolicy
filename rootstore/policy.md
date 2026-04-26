@@ -169,22 +169,14 @@ following documents to be acceptable:
 **WebTrust Program for Certification Authorities** ([WebTrust][WebTrust-For-CAs])
 *   WebTrust "[Principles and Criteria for Certification Authorities" - Version
     2.2.2][WebTrust-2.2.2], or later version;
-*   WebTrust "Principles and Criteria for Certification Authorities – Network Security," Version 1.7 permitted for audit periods ending before **2026-11-29**, [WebTrust Network Security - Version 2.0.5][WebTrust-NetSec]" required thereafter;  
-*   WebTrust "Principles and Criteria for Certification Authorities – SSL Baseline," Version 2.9 permitted for audit periods ending before **2026-11-29**, [WebTrust TLS Baseline - Version 2.10][WebTrust-BRs] required thereafter;
-*   WebTrust "[Principles and Criteria for Certification Authorities - Extended Validation SSL" - Version 2.0.1][WebTrust-EV], or later version;
-*   WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates" - Version 1.0.8][WebTrust-SMIME], or later version;
+*   WebTrust "Principles and Criteria for Certification Authorities – Network Security," [Version 1.7][WebTrust-NetSec-1.7] permitted for audit periods ending before **2026-11-29**, [WebTrust Network Security - Version 2.0.5][WebTrust-NetSec-2.0.5]" required thereafter;  
+*   WebTrust "Principles and Criteria for Certification Authorities – SSL Baseline," [Version 2.9][WebTrust-BRs-2.9] permitted for audit periods ending before **2026-11-29**, [WebTrust TLS Baseline - Version 2.10][WebTrust-BRs-2.10] required thereafter;
+*   WebTrust "[Principles and Criteria for Certification Authorities - Extended Validation SSL" - Version 2.0.1][WebTrust-EV-2.0.1], or later version;
+*   WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates" - Version 1.0.8][WebTrust-SMIME-1.0.8], or later version;
 
 **European Telecommunications Standards Institute - Electronic Signatures and Trust Infrastructures** ([ETSI ESI](https://www.etsi.org/committee/esi))
-*   "Trust Service Providers practice" in ETSI EN 319 411-1 v1.5.1, or
-    later version [Policy and security requirements for Trust Service Providers
-    issuing certificates; Part 1: General requirements][ETSI-319-411-1],
-    specifying a policy or policies appropriate to the trust bit(s) being
-    applied for; 
-*   "Trust Service Providers practice" in ETSI EN 319 411-2 v2.6.1, or
-    later version [Policy and security requirements for Trust Service Providers
-    issuing certificates; Part 2: Requirements for trust service providers
-    issuing EU qualified certificates][ETSI-319-411-2], specifying a
-    policy or policies appropriate to the trust bit(s) being applied for; *and*
+*   "Trust Service Providers practice" in Policy and security requirements for Trust Service Providers issuing certificates; Part 1: General requirements, ETSI EN 319 411-1, [v1.4.1][ETSI-319-411-1V1.4.1] (effective 10/4/2023), [v1.5.1][ETSI-319-411-1V1.5.1] (effective 03/24/2025), or later version, specifying a policy or policies appropriate to the trust bit(s) being applied for; 
+*   "Trust Service Providers practice" in Policy and security requirements for Trust Service Providers issuing certificates; Part 2: Requirements for trust service providers issuing EU qualified certificates, ETSI EN 319 411-2, [v2.5.1][ETSI-319-411-2V2.5.1] (effective 10/4/2023), [v2.6.1][ETSI-319-411-2V2.6.1] (effective 06/06/2025) or later version, specifying a policy or policies appropriate to the trust bit(s) being applied for; *and*
 *   ETSI "[Requirements for Trust Service Providers issuing publicly trusted S/MIME certificates][ETSI-119-411-6]", ETSI TS 119 411-6 v1.1.1, or later version.
 
 #### 3.1.2 Required Audits
@@ -1051,15 +1043,21 @@ Any copyright in this document is [dedicated to the Public Domain][CC-0].
 [TLS-BRs]:                  https://cabforum.org/working-groups/server/baseline-requirements/documents/
 [SMIME-BRs]:                https://cabforum.org/working-groups/smime/documents/
 [NSRs]:                     https://cabforum.org/working-groups/netsec/documents/
-[ETSI-319-411-1]:           https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.05.01_60/en_31941101v010501p.pdf
-[ETSI-319-411-2]:           https://www.etsi.org/deliver/etsi_en/319400_319499/31941102/02.06.01_60/en_31941102v020601p.pdf
+[ETSI-319-411-1V1.4.1]:     https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.05.01_60/en_31941101v010401p.pdf
+[ETSI-319-411-1V1.5.1]:     https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.05.01_60/en_31941101v010501p.pdf
+[ETSI-319-411-2V2.5.1]:     https://www.etsi.org/deliver/etsi_en/319400_319499/31941102/02.06.01_60/en_31941102v020501p.pdf
+[ETSI-319-411-2V2.6.1]:     https://www.etsi.org/deliver/etsi_en/319400_319499/31941102/02.06.01_60/en_31941102v020601p.pdf
 [ETSI-119-411-6]:           https://www.etsi.org/deliver/etsi_ts/119400_119499/11941106/01.01.01_60/ts_11941106v010101p.pdf
 [WebTrust-2.2.2]:           https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/mds21216webtrustca-222final-(15).pdf
-[WebTrust-NetSec]:          https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_web-trust-network-security_version-2-0-5.pdf?rev=0ec68ce03b414276abfdc9aa85474093&hash=D02630C1D7B904701FE518EF863EE0E9
-[WebTrust-BRs]:             https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_webtrust_tls-baseline-v210.pdf?rev=9569e6d25b894b6a8ef89b2a58fc4115&hash=C71DB49770F1735E9C55DE3036E92B18
-[WebTrust-SMIME]:           https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/01618-ms-24-3854_webtrust---smime-v1-0-8.pdf?rev=dcf8805708bd452e8eacabd5b3a6da36&hash=74691CF3D86A8798E82FDCD1F7A9AC90
+[WebTrust-NetSec-1.7]:          https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_24-3464_webtrust-for-ca-network-security-v1-7_final.pdf
+[WebTrust-NetSec-2.0.5]:          https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_web-trust-network-security_version-2-0-5.pdf?rev=0ec68ce03b414276abfdc9aa85474093&hash=D02630C1D7B904701FE518EF863EE0E9
+[WebTrust-BRs-2.9]:             https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/01618-ms-24-3852_webtrust---tls-baseline-v29.pdf?rev=e0678ebc91614665b1b2d0a25a50d9bf&hash=5837E2C482F5162302AA0A61A1EE6B38
+[WebTrust-BRs-2.10]:             https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_webtrust_tls-baseline-v210.pdf?rev=9569e6d25b894b6a8ef89b2a58fc4115&hash=C71DB49770F1735E9C55DE3036E92B18
+[WebTrust-SMIME-1.0.3]:           https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618-ms_24-3464_webtrust-for-ca-smime-certificates-v1-0-3_final.pdf
+[WebTrust-SMIME-1.0.8]:           https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/01618-ms-24-3854_webtrust---smime-v1-0-8.pdf?rev=dcf8805708bd452e8eacabd5b3a6da36&hash=74691CF3D86A8798E82FDCD1F7A9AC90
 [WebTrust-For-CAs]:         https://www.cpacanada.ca/en/business-and-accounting-resources/audit-and-assurance/overview-of-webtrust-services/principles-and-criteria
-[WebTrust-EV]:              https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/01618-ms-24-3854_webtrust---extended-validation-tls-v2-0-1.pdf?rev=4299171bd40b44058236d9cffffdd751&hash=235168A20251244ADE0490CEFA39A898
+[WebTrust-EV-1.8]:              https://www.cpacanada.ca/-/media/site/operational/ms-member-services/docs/webtrust/01618_ms_extended-validation-ssl_final_aoda-compliant.pdf
+[WebTrust-EV-2.0.1]:              https://www.cpacanada.ca/-/media/site/operational/ep-education-pld/docs/01618-ms-24-3854_webtrust---extended-validation-tls-v2-0-1.pdf?rev=4299171bd40b44058236d9cffffdd751&hash=235168A20251244ADE0490CEFA39A898
 [CC-BY]:                    https://creativecommons.org/licenses/by/4.0/
 [CC-BY-SA]:                 https://creativecommons.org/licenses/by-sa/4.0/
 [CC-BY-ND]:                 https://creativecommons.org/licenses/by-nd/4.0/
