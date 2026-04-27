@@ -2,7 +2,7 @@
 
 *Version 3.1*
 
-*[Effective May , 2026][Policy-Archive]*
+*[Effective June 15, 2026][Policy-Archive]*
 
 ## 1. Introduction
 
@@ -247,7 +247,7 @@ If Mozilla determines that an audit provided does not meet the requirements of t
 
 #### 3.1.5 Detailed Controls Reports
 
-Beginning July 1, 2027, each CA operator MUST obtain, on an annual basis, a Detailed Controls Report (DCR) covering the design, controls, verification methods, scope boundaries, and operating effectiveness of its CA systems. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
+For each annual audit period beginning on or after July 1, 2027, each CA operator MUST obtain a Detailed Controls Report (DCR) covering the design, controls, verification methods, scope boundaries, and operating effectiveness of its CA systems. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
 
 The DCR MUST contain the following:
 
