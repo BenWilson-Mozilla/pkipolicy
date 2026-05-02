@@ -275,7 +275,7 @@ Therefore:
 1.  CP/CPS Documentation MUST provide information in a manner that is explicit, bounded, auditable, and in a manner that is sufficient for Mozilla to determine whether and how the CA operator
     complies with this policy and other applicable requirements;
 
-2.  CA operators MUST maintain such documentation in a structured, text-based format suitable for version control (e.g. Markdown, AsciiDoc, or equivalent) and host it in a publicly accessible repository or equivalent system that preserves version history;
+2.  CA operators MUST ensure that CP/CPS Documentation is made available in a structured, text-based format (e.g. Markdown, AsciiDoc, or equivalent) and is hosted in a publicly accessible repository or equivalent system that provides publicly accessible version history. This requirement applies to the published form of the documentation and does not prescribe the CA operator’s internal authoring tools or processes;
 
 3.  CP/CPS Documentation MUST be made available to Mozilla under one
     of the following Creative Commons licenses (or later versions):
@@ -313,9 +313,9 @@ CP/CPS Documentation MUST describe the CA operator’s implementation commitment
 
 #### 3.3.2 Normative References and Incorporation by Reference
 
-A CA operator MAY incorporate external standards (e.g., CA/Browser Forum Requirements, RFCs, and other applicable policies) by reference for normative obligations and shared definitions.
+To avoid duplication, divergence, and staleness, incorporation by reference SHOULD be used for shared definitions and for externally defined normative requirements (e.g., CA/Browser Forum Requirements, RFCs, and other applicable policies). This does not eliminate the requirement to describe CA-specific implementation practices.
 
-However, incorporation by reference MUST NOT be used as a substitute for describing CA-specific implementation commitments. CP/CPS Documentation MUST clearly identify incorporated documents and enable a reviewer to determine how the CA operator’s practices correspond to those requirements.
+However, incorporation by reference MUST NOT be used as a substitute for describing CA-specific implementation commitments. CP/CPS Documentation MUST clearly identify incorporated documents and enable a reviewer to determine how the CA operator’s documented practices implement and conform to those requirements.
 
 #### 3.3.3 Implementation Commitments
 
