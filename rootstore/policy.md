@@ -82,10 +82,10 @@ CA operators whose certificates are included in Mozilla's root store MUST:
 2.  comply with the CA/Browser Forum's [Baseline Requirements for the Issuance and Management of Publicly‐Trusted TLS Server
 Certificates][TLS-BRs] ("TLS BRs"), the [Baseline Requirements for the Issuance and Management of Publicly‐Trusted S/MIME Certificates][SMIME-BRs] ("S/MIME BRs"), and for TLS certificates marked as Extended Validation, CA operators MUST comply with the [Guidelines for the Issuance and Management of Extended Validation Certificates][EVGLs];
 3.  follow industry best practice for securing their networks and comply with the [CA/Browser Forum's Network and Certificate System Security Requirements][NSRs];
-4.  publicly disclose, in a Certification Practice Statement (CPS) or a combined Certificate Policy / Certification Practice Statement (CP/CPS) (collectively, “CP/CPS Documentation”), the information required by this policy;
+4.  publicly disclose, in a Certification Practice Statement (CPS) or a combined Certificate Policy / Certification Practice Statement (CP/CPS) (collectively, “CP/CPS Documentation”), information sufficient to enable Mozilla, auditors, and relying parties to assess how the CA operator’s practices implement and comply with the requirements of this policy and requirements incorporated by reference;
 5.  use multi-factor authentication to protect accounts capable of directly causing certificate issuance, consistent with the requirements of the S/MIME BRs and TLS BRs, or implement equivalent technical controls that restrict certificate issuance to a limited set of pre-approved domains or email addresses;
 6.  comply with the Common CA Database policy ("[CCADB Policy][CCADB-Policy]");
-7.  operate in accordance with applicable publicly available standards and audit criteria; *and*
+7.  operate in accordance with the requirements specified in Sections 2.3 (Baseline Requirements Conformance) and 3.1.1 (Audit Criteria); *and*
 8.  ensure that all certificates within the scope of this policy comply with this policy.
 
 In the event of inconsistency between this policy and other applicable requirements, this policy SHALL take precedence. Where this policy does not explicitly resolve such inconsistency, the most restrictive applicable requirement SHALL apply unless otherwise specified.
