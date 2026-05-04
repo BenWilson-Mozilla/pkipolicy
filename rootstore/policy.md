@@ -247,16 +247,15 @@ If Mozilla determines that an audit provided does not meet the requirements of t
 
 #### 3.1.5 Detailed Controls Reports
 
-For each annual audit period beginning on or after July 1, 2027, each CA operator MUST obtain a Detailed Controls Report (DCR) covering the design, controls, verification methods, scope boundaries, and operating effectiveness of its CA systems. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
+For each annual audit period beginning on or after July 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR) covering the design, controls, verification methods, scope boundaries, and operating effectiveness of its CA systems as they relate to compliance with the CA/Browser Forum's TLS Baseline Requirements and the Network and Certificate System Security Requirements. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
 
 The DCR MUST contain the following:
 
 * A description of the CA system, including system boundaries, components, and interactions with subscribers, relying parties, and third parties;
-* Identification of applicable control objectives or criteria, and a mapping of controls to those objectives;;
+* Identification of applicable control objectives or criteria, and a mapping of controls to those objectives;
 * A description of the controls implemented to meet those objectives;
 * The auditor’s tests of controls and the results of those tests;
-* An evaluation of the suitability of control design and operating effectiveness over a defined audit period;
-* Consideration of the risks that may prevent the CA from meeting applicable criteria and how the controls address those risks; and
+* An evaluation of the suitability of control design and operating effectiveness over a defined audit period; and
 * A clear statement of the scope of testing, including any limitations or exclusions.
 
 The DCR is intended for use by CA management and other parties with sufficient knowledge to understand the CA’s systems and controls and is not required to be publicly disclosed. However, a CA Operator MUST provide the DCR to Mozilla within 30 days of request to enable Mozilla to verify the audit scope, to assess control design and operating effectiveness, and to evaluate other matters relevant to compliance with this Policy.
