@@ -247,7 +247,11 @@ If Mozilla determines that an audit provided does not meet the requirements of t
 
 #### 3.1.5 Detailed Controls Reports
 
+**Applicability and Scope of Requirement**
+
 For each annual audit period beginning on or after July 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR) covering the design, controls, verification methods, scope boundaries, and operating effectiveness of its CA systems as they relate to compliance with the CA/Browser Forum's TLS Baseline Requirements and the Network and Certificate System Security Requirements. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
+
+**Minimum Contents of DCR**
 
 The DCR MUST contain the following:
 
@@ -258,7 +262,32 @@ The DCR MUST contain the following:
 * An evaluation of the suitability of control design and operating effectiveness over a defined audit period; and
 * A clear statement of the scope of testing, including any limitations or exclusions.
 
+The DCR MUST include sufficient detail to enable an informed reviewer to understand the nature, timing, and extent of testing performed and the basis for the auditor’s conclusions.
+
+**Intended Use and Availability**
+
 The DCR is intended for use by CA management and other parties with sufficient knowledge to understand the CA’s systems and controls and is not required to be publicly disclosed. However, a CA Operator MUST provide the DCR to Mozilla within 30 days of request to enable Mozilla to verify the audit scope, to assess control design and operating effectiveness, and to evaluate other matters relevant to compliance with this Policy.
+
+**Access and Provision to Mozilla**
+
+The CA Operator MUST ensure that the DCR is prepared and issued in a manner that permits disclosure to Mozilla upon request.
+
+This requirement includes ensuring, at the time of audit engagement, that:
+
+* Mozilla is identified as an authorized recipient of the DCR; or
+* The terms of the engagement otherwise permit the CA Operator to provide the DCR to Mozilla without restriction, subject to appropriate confidentiality obligations.
+
+The CA Operator MUST NOT enter into audit or other agreements that would prevent or materially restrict the provision of the DCR to Mozilla.
+
+Failure to provide the DCR to Mozilla upon request, due to contractual, legal, or other restrictions, may be considered a failure to meet the audit requirements of this Policy.
+
+**Use and Confidentiality**
+
+Mozilla’s access to the DCR is for informational and supervisory purposes related to evaluating compliance with this Policy.
+
+Mozilla is not an intended user of the DCR for purposes of reliance, unless explicitly agreed to by the auditor.
+
+Mozilla will treat any DCR provided under this section as confidential and will not disclose it to third parties except as required by law or as necessary to enforce this Policy.
 
 ### 3.2 Auditors
 
